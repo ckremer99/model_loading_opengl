@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		062E67802CB2D74B00597991 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 062E677F2CB2D74B00597991 /* OpenGL.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		062E64532CB2D66E00597991 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -20,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		062E64552CB2D66E00597991 /* model_loading_opengl */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = model_loading_opengl; sourceTree = BUILT_PRODUCTS_DIR; };
+		062E677F2CB2D74B00597991 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -35,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				062E67802CB2D74B00597991 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,6 +51,7 @@
 			isa = PBXGroup;
 			children = (
 				062E64572CB2D66E00597991 /* model_loading_opengl */,
+				062E677E2CB2D74B00597991 /* Frameworks */,
 				062E64562CB2D66E00597991 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +62,14 @@
 				062E64552CB2D66E00597991 /* model_loading_opengl */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		062E677E2CB2D74B00597991 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				062E677F2CB2D74B00597991 /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,6 +260,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"${PROJECT_DIR}/model_loading_opengl/include",
+					"${PROJECT_DIR}/model_loading_opengl/learnopengl",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/model_loading_opengl/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -253,6 +276,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"${PROJECT_DIR}/model_loading_opengl/include",
+					"${PROJECT_DIR}/model_loading_opengl/learnopengl",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/model_loading_opengl/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
